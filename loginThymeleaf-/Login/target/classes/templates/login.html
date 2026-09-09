@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- LADO DO LOGIN -->
+        <section class="login-container">
+
+            <div class="login-box">
+
+                <h1>Login</h1>
+
+                <p class="subtitulo">
+                    Bem-vindo! Entre na sua conta.
+                </p>
+
+                <form th:action="@{/login}" method="post">
+
+                    <div class="campo">
+
+                        <label for="email">Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu email"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label for="senha">Senha</label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="opcoes">
+
+                        <label class="lembrar">
+
+                            <input
+                                type="checkbox"
+                                name="lembrar"
+                            >
+
+                            <span>Lembrar-me</span>
+
+                        </label>
+
+                        <a th:href="@{/esqueci-senha}">
+                            Esqueceu sua senha?
+                        </a>
+
+                    </div>
+
+                    <button type="submit">
+                        Login
+                    </button>
+
+                </form>
+
+                <p class="cadastro">
+
+                    Não possui uma conta?
+
+                    <a th:href="@{/cadastro}">
+                        Cadastre-se
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- LADO DA IMAGEM -->
+        <section class="imagem-container">
+
+            <!-- VOCÊ COLOCA O LINK DA SUA IMAGEM AQUI -->
+            <img
+                th:src="@{/images/background.jpg}"
+                alt="Imagem lateral"
+            >
+
+            <div class="texto-imagem">
+
+                <h2>Be a part of</h2>
+
+                <h2>Something Beautiful</h2>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        190deg,
+        #cfa24e,
+        #df93bf,
+        #4f2b20
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 650px;
+
+    display: flex;
+
+    background: #f9f9fb;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   LOGIN
+========================= */
+
+.login-container {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f9f9fb;
+}
+
+.login-box {
+    width: 75%;
+    max-width: 420px;
+}
+
+.login-box h1 {
+    color: #2a1b4d;
+
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #777;
+
+    font-size: 16px;
+
+    margin-bottom: 40px;
+}
+
+
+/* CAMPOS */
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+
+    color: #2a1b4d;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.campo input {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #5e2cbf;
+
+    box-shadow: 0 0 0 3px rgba(94, 44, 191, 0.12);
+}
+
+.campo input::placeholder {
+    color: #aaa;
+}
+
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.opcoes {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 5px 0 28px;
+
+    font-size: 13px;
+}
+
+.lembrar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #666;
+
+    cursor: pointer;
+}
+
+.lembrar input {
+    accent-color: #5e2cbf;
+}
+
+.opcoes a {
+    color: #5e2cbf;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.opcoes a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #41153b;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #000000;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CADASTRO
+========================= */
+
+.cadastro {
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+.cadastro a {
+    color: #5e2cbf;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.cadastro a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.imagem-container {
+    width: 50%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #2a1b4d;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Efeito sobre a imagem */
+
+.imagem-container::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(42, 27, 77, 0.75),
+        rgba(42, 27, 77, 0.05)
+    );
+}
+
+
+/* TEXTO DA IMAGEM */
+
+.texto-imagem {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 40px;
+    bottom: 40px;
+
+    color: white;
+}
+
+.texto-imagem h2 {
+    font-size: 32px;
+
+    line-height: 1.15;
+}
+
+.texto-imagem h2:last-child {
+    color: #ff9c55;
+}
+
+
+/* =========================
+RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .container {
+        width: 92%;
+
+        min-height: auto;
+    }
+
+    .imagem-container {
+        display: none;
+    }
+
+    .login-container {
+        width: 100%;
+
+        padding: 60px 20px;
+    }
+
+    .login-box {
+        width: 90%;
+    }
+}
